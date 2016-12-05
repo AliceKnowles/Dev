@@ -4,7 +4,6 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<!DOCTYPE html>
 <html>
 <head>
   <title>Santa Mail</title>
@@ -25,23 +24,23 @@ and open the template in the editor.
           font-family: sans-serif;
           font-size: 15px;
       }
-      ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      ::-webkit-input-placeholder {
           color:    rgba(133,214,217,1);
       }
-      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-          color:    rgba(133,214,217,1);
-          opacity:  1;
-      }
-      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      :-moz-placeholder {
           color:    rgba(133,214,217,1);
           opacity:  1;
       }
-      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      ::-moz-placeholder {
+          color:    rgba(133,214,217,1);
+          opacity:  1;
+      }
+      :-ms-input-placeholder {
           color:    rgba(133,214,217,1);
       }
           .div1{
               position: relative;
-              height: 100vh;  /*          100% viewport height*/
+              height: 100vh;  
               width:100%; 
               background-image: url("img/presentBanner.jpg");
               background-position: bottom left;
@@ -49,14 +48,12 @@ and open the template in the editor.
               padding: 0;
               padding-top:70vh; /*padding above navbar*/
           }
-/*      To do: stetch chevon, make it scroll smoothly like elevator*/
 #chevronDown{
     position:absolute;
     top: 85%;
     color: white;
     font-size: 50px;
     z-index: 1000;
-/*    background-color: rgba(100,100,100,0.6);*/
     border-radius: 50%;
     padding:5px;
     padding-left:10px;
@@ -247,6 +244,7 @@ h2{
     text-align: center;
     width:80%;
     color: rgba(133,214,217,1);
+    height: 40px;
 }
 .fix-nav {
   position: fixed;
@@ -563,7 +561,7 @@ h2{
     padding:15px; 
     text-decoration: none; 
     color: rgba(133,214,217,1); 
-    background-color:inherit; 
+    background-color:white; 
     border:1px solid rgba(133,214,217,1);;
     font-size:18px;
 }
@@ -772,17 +770,14 @@ ul> li> a:hover{
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       event.preventDefault();
-
-      // Store hash
       var hash = this.hash;
       
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 500, function(){
-        // Add hash (#) to URL
         window.location.hash = hash;
       });
-    } // End if
+    } 
   });
 });
    </script>
@@ -819,10 +814,6 @@ function showDivs(n) {
    
    <!--open small-device navbar-->
    <script type="text/javascript">
-       
-//      function showNav(){
-//         $("#myDropdown").addClass("show");
-//      }
       function showNav(){
          document.getElementById("myDropdown").classList.toggle("show");
       }
@@ -936,16 +927,18 @@ function showDivs(n) {
         function getTimeRemaining(endtime){
             var msLeft = Date.parse(endtime) - Date.parse(new Date());
             var seconds = Math.floor( (msLeft/1000)%60 );
-            var minutes = Math.floor( (msLeft/1000/60)%60); /*use%60 to get the remaining seconds AFTER the minutes have been counted*/
+            var minutes = Math.floor( (msLeft/1000/60)%60);
             var hours = Math.floor( (msLeft/(1000*60*60)) %24);
             var days = Math.floor(msLeft/(1000*60*60*24));
-            /*below: return the data as a usable object*/
             return{
                 'days': days,
                 'hours': hours,
                 'minutes': minutes,
                 'seconds':seconds
             };
+        }
+        function getDays(time){
+            //IMPLEMENT
         }
         function updateCountdown(){
              var t = getTimeRemaining('2016-12-24 23:59:59 GMT+1300');
