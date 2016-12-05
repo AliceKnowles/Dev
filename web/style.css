@@ -8,3 +8,605 @@ and open the template in the editor.
     Author     : Alice
 */
 
+body{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+::-webkit-input-placeholder {
+    color:    rgba(133,214,217,1);
+}
+:-moz-placeholder {
+    color:    rgba(133,214,217,1);
+    opacity:  1;
+}
+::-moz-placeholder {
+    color:    rgba(133,214,217,1);
+    opacity:  1;
+}
+:-ms-input-placeholder {
+    color:    rgba(133,214,217,1);
+}
+.div1{
+    position: relative;
+    height: 100vh;  
+    width:100%; 
+    background-image: url("img/presentBanner.jpg");
+    background-position: bottom left;
+    background-size: cover;
+    padding: 0;
+    padding-top:70vh; /*padding above navbar*/
+}
+#chevronDown{
+    position:absolute;
+    top: 85%;
+    color: white;
+    font-size: 50px;
+    z-index: 1000;
+    border-radius: 50%;
+    padding:5px;
+    padding-left:10px;
+    padding-top:14px; 
+    border: 1px solid white; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
+#chevronDown:hover{
+    background: rgba(255,255,255, 0.3);
+    transition: 0.5s;
+}
+
+.div2{
+    background-color: white;
+    padding-top:30px;
+    margin-bottom: 110px;
+}
+.div3{
+    padding-bottom: 40px;
+}
+.navdeco{
+    background-color: rgba(255,255,255,0.7);
+    height: 50px;
+    z-index:999; 
+    position:relative;
+    color: black;
+    transition: background-color 1s;
+}
+ul> li{
+    text-align: right;
+    padding-right: 5px;
+}
+ul> li> a{
+    color: inherit;
+}
+#clock{
+    color: white;
+    display: inline-block;
+    width:75%;
+    margin:0 auto; 
+    padding:0 2%; 
+}
+
+#clock > div{
+    padding: 0 1%;
+    display: inline-block;
+}
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+h2{
+    line-height: 70px;
+    font-size: 40px;
+}
+.christmasFont{
+    font-family: 'Mountains of Christmas', cursive;
+}
+.signatureFont{
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+}
+.elevator{
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    right: 40px;
+    bottom: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 50%;
+    border: 1px solid rgba(133,214,217,0.6);
+    background: white;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    cursor:pointer;
+}
+.elevator.showElevator{
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+}
+.elevator .glyphicon{
+    color: rgba(133,214,217,0.8);
+    margin:0;
+    padding:0;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    top:6px;
+    left: 2px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.elevator:hover{
+    background: rgba(133,214,217,1);
+    transition: 0.5s;
+}
+.elevator .glyphicon:hover{
+    color: white;
+}
+
+.elevator:hover .fa{
+    color: white;
+    top:5px;
+}
+
+#navIcon{
+    display:none;
+    float:right; 
+    padding:5px; 
+    font-size: 25px; 
+    text-decoration: none; 
+    color: inherit;
+}
+#myDropdown{
+    float:right;
+}
+.postStamp{
+    display: inline-block;
+    border-radius:4px;
+    width:100px;
+    height:100px;
+    cursor: move;
+    margin:10px;
+    background-position: center; 
+    background-size:cover;
+    border: 1px solid rgba(133,214,217,1);
+}
+#stampOptions{
+    display: block;
+    border: 2px solid rgba(133,214,217,1);
+    margin: 0;
+}
+#msgContainer{
+    position:relative;
+    border-radius: 4px;
+    width:100%;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+#stampSpot{
+    width:125px; 
+    height:125px; 
+    position:absolute;
+    margin-top: 30px;
+    right:30px;
+    border: 2px dashed white;
+    border-radius: 4px;
+}
+.hide{
+    visibility: hidden;
+}
+/*why can i not have a class for both of the below? - all classes disappear when i add/remove the 'hide' c'*/
+#stampInstructions{
+    padding-top: 10px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+#bookInstructions{
+    padding-top: 10px;
+    font-size: 18px;
+    color: rgba(133,214,217,1);
+    text-align: center;
+}
+
+.personal{
+    font-weight: bolder;
+
+}
+.entries{
+    background-color: white;
+    border: none; 
+    border-bottom: 1px solid rgba(133,214,217,1);
+    text-align: center;
+    width:80%;
+    color: rgba(133,214,217,1);
+    height: 40px;
+}
+.fix-nav {
+    position: fixed;
+    background-color: rgba(133,214,217,0.9);
+    border-bottom: 1px solid rgba(133,214,217,1);
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    transition: background-color 1s;
+    color:white;
+}
+#postcardmsg{
+    text-align:left; 
+    padding-top:30px; 
+    line-height: 30px;
+}
+
+/*only show elevator on desktop screen*/
+@media (max-width: 768px){
+    #chevronDown{
+        display: none !important;
+    }
+    .elevator{
+        display: none !important;
+    }
+    #navIcon{
+        display: inline-block;
+    }
+    #myDropdown{
+        z-index: -999;
+        width:100%;
+        padding-top:45px; 
+        display:none; /*hides list until navIcon clicked */
+        position: absolute;
+        width:100%;
+        color: rgba(133,214,217,1);
+        font-weight: bolder;
+        border-bottom: 1px solid rgba(133,214,217,1);
+    }
+    ul> li{
+        padding:0;
+        background-color: rgba(255,255,255,0.8);
+        text-align:center;
+    }
+    h2{
+        font-size:30px;
+    }
+    #stampSpot{
+        width:99px;
+        height:99px;
+        margin: 20px 0px;
+    }
+    .postStamp{
+        width:75px;
+        height:75px;
+        z-index: 999999;
+    }
+    #msgContainer{
+        padding:0;
+        margin:0;
+        padding-bottom: 10px;
+    }
+    #bookInstructions{
+        font-size:14px;
+    }
+    #stampInstructions{
+        font-size:14px;
+    }
+    /*    ul li:not(:first-child) {
+            visibility: hidden;
+        }*/
+}
+@media (max-width: 480px){
+    #clock > div{
+        width:100%;
+        text-align: left;
+    }
+    .mobileText{
+        font-size: 12px;
+        text-align: center;
+    }
+    h2{
+        font-size: 18px;
+        text-align: center;
+    }
+    #clock{
+        width:100%;
+        padding:0;
+    }
+    #postcardmsg{
+        padding-top:120px;
+    }
+}
+.blue{
+    color:rgba(133,214,217,1); 
+}
+/*---loading bar---*/
+#floatingBarsG{
+    position:relative;
+    width:60px;
+    height:75px;
+    margin:auto;
+}
+
+.blockG{
+    position:absolute;
+    background-color:rgb(255,255,255);
+    width:10px;
+    height:23px;
+    border-radius:8px 8px 0 0;
+    -o-border-radius:8px 8px 0 0;
+    -ms-border-radius:8px 8px 0 0;
+    -webkit-border-radius:8px 8px 0 0;
+    -moz-border-radius:8px 8px 0 0;
+    transform:scale(0.4);
+    -o-transform:scale(0.4);
+    -ms-transform:scale(0.4);
+    -webkit-transform:scale(0.4);
+    -moz-transform:scale(0.4);
+    animation-name:fadeG;
+    -o-animation-name:fadeG;
+    -ms-animation-name:fadeG;
+    -webkit-animation-name:fadeG;
+    -moz-animation-name:fadeG;
+    animation-duration:1.2s;
+    -o-animation-duration:1.2s;
+    -ms-animation-duration:1.2s;
+    -webkit-animation-duration:1.2s;
+    -moz-animation-duration:1.2s;
+    animation-iteration-count:infinite;
+    -o-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+    -o-animation-direction:normal;
+    -ms-animation-direction:normal;
+    -webkit-animation-direction:normal;
+    -moz-animation-direction:normal;
+}
+
+#rotateG_01{
+    left:0;
+    top:27px;
+    animation-delay:0.45s;
+    -o-animation-delay:0.45s;
+    -ms-animation-delay:0.45s;
+    -webkit-animation-delay:0.45s;
+    -moz-animation-delay:0.45s;
+    transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+}
+
+#rotateG_02{
+    left:8px;
+    top:10px;
+    animation-delay:0.6s;
+    -o-animation-delay:0.6s;
+    -ms-animation-delay:0.6s;
+    -webkit-animation-delay:0.6s;
+    -moz-animation-delay:0.6s;
+    transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+}
+
+#rotateG_03{
+    left:25px;
+    top:3px;
+    animation-delay:0.75s;
+    -o-animation-delay:0.75s;
+    -ms-animation-delay:0.75s;
+    -webkit-animation-delay:0.75s;
+    -moz-animation-delay:0.75s;
+    transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+}
+
+#rotateG_04{
+    right:8px;
+    top:10px;
+    animation-delay:0.9s;
+    -o-animation-delay:0.9s;
+    -ms-animation-delay:0.9s;
+    -webkit-animation-delay:0.9s;
+    -moz-animation-delay:0.9s;
+    transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+}
+
+#rotateG_05{
+    right:0;
+    top:27px;
+    animation-delay:1.05s;
+    -o-animation-delay:1.05s;
+    -ms-animation-delay:1.05s;
+    -webkit-animation-delay:1.05s;
+    -moz-animation-delay:1.05s;
+    transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+}
+
+#rotateG_06{
+    right:8px;
+    bottom:7px;
+    animation-delay:1.2s;
+    -o-animation-delay:1.2s;
+    -ms-animation-delay:1.2s;
+    -webkit-animation-delay:1.2s;
+    -moz-animation-delay:1.2s;
+    transform:rotate(135deg);
+    -o-transform:rotate(135deg);
+    -ms-transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+    -moz-transform:rotate(135deg);
+}
+
+#rotateG_07{
+    bottom:0;
+    left:25px;
+    animation-delay:1.35s;
+    -o-animation-delay:1.35s;
+    -ms-animation-delay:1.35s;
+    -webkit-animation-delay:1.35s;
+    -moz-animation-delay:1.35s;
+    transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+}
+
+#rotateG_08{
+    left:8px;
+    bottom:7px;
+    animation-delay:1.5s;
+    -o-animation-delay:1.5s;
+    -ms-animation-delay:1.5s;
+    -webkit-animation-delay:1.5s;
+    -moz-animation-delay:1.5s;
+    transform:rotate(-135deg);
+    -o-transform:rotate(-135deg);
+    -ms-transform:rotate(-135deg);
+    -webkit-transform:rotate(-135deg);
+    -moz-transform:rotate(-135deg);
+}
+
+
+
+@keyframes fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-o-keyframes fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-ms-keyframes fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-webkit-keyframes fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-moz-keyframes fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+.btn-deco{
+    padding:15px; 
+    text-decoration: none; 
+    color: rgba(133,214,217,1); 
+    background-color:white; 
+    border:1px solid rgba(133,214,217,1);;
+    font-size:18px;
+}
+.btn-deco:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+hr{
+    border: 1px solid rgba(133,214,217,0.8); 
+    width: 95%;
+}
+#stampNav-container{
+    width:150px; 
+    position:relative;
+    margin-top: 10px;
+    margin-right:5px;
+}
+
+#slides{
+    position: relative;
+    height: 100px;
+    width:100px;
+    padding:0;
+    margin:0 auto;
+    margin-bottom: 30px;
+    list-style-type: none;
+    border: 2px solid white;
+}
+#slides > ul{
+    padding:0;
+}
+.stampNav{
+    position: absolute;
+    z-index: 4;
+    top:40%;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 100%;
+    width:20px;
+    cursor:pointer;
+    color:white;
+}
+.stampNav:hover{
+    background-color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    color:rgba(133,214,217,1);
+}
+#scrollRight{
+    right:0;
+}
+#scrollLeft{
+    left:0;
+}
+.stamp{
+    height:96px;
+    width:96px;
+}
+
+.show {
+    visibility: visible;
+}
